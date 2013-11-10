@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Numero:</b>
+  <%= @apartamento.numero %>
+</p>
+
+<p>
+  <b>Meses:</b>
+  <%= @apartamento.meses %>
+</p>
+
+<p>
+  <b>Mensualidad:</b>
+  <%= @apartamento.mensualidad %>
+</p>
+
+<p>
+  <b>Mes:</b>
+  <%= @apartamento.mes %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%= @apartamento.estado %>
+</p>
+
+<p>
+  <b>Inquilino:</b>
+  <%= @apartamento.inquilino %>
+</p>
+
+
+<%= link_to 'Edit', edit_apartamento_path(@apartamento) %> |
+<%= link_to 'Back', apartamentos_path %>

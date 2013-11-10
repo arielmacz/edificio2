@@ -1,0 +1,33 @@
+<h1>Listing apartamentos</h1>
+
+<table>
+  <tr>
+    <th>Numero</th>
+    <th>Meses</th>
+    <th>Mensualidad</th>
+    <th>Mes</th>
+    <th>Estado</th>
+    <th>Inquilino</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @apartamentos.each do |apartamento| %>
+  <tr>
+    <td><%= apartamento.numero %></td>
+    <td><%= apartamento.meses %></td>
+    <td><%= apartamento.mensualidad %></td>
+    <td><%= apartamento.mes %></td>
+    <td><%= apartamento.estado %></td>
+    <td><%= apartamento.inquilino %></td>
+    <td><%= link_to 'Show', apartamento %></td>
+    <td><%= link_to 'Edit', edit_apartamento_path(apartamento) %></td>
+    <td><%= link_to 'Destroy', apartamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Apartamento', new_apartamento_path %>

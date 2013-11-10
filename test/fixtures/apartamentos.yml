@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  numero: MyString
+  meses: 1
+  mensualidad: 9.99
+  mes: 1
+  estado: MyString
+  inquilino: MyString
+
+two:
+  numero: MyString
+  meses: 1
+  mensualidad: 9.99
+  mes: 1
+  estado: MyString
+  inquilino: MyString

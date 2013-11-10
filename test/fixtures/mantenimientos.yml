@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  apartamento_numero: MyString
+  pintura: 9.99
+  fumigacion: 9.99
+  plomeria: 9.99
+  total: 9.99
+
+two:
+  apartamento_numero: MyString
+  pintura: 9.99
+  fumigacion: 9.99
+  plomeria: 9.99
+  total: 9.99

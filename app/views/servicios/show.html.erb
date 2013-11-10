@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Apartamento numero:</b>
+  <%= @servicio.apartamento_numero %>
+</p>
+
+<p>
+  <b>Agua:</b>
+  <%= @servicio.agua %>
+</p>
+
+<p>
+  <b>Luz:</b>
+  <%= @servicio.luz %>
+</p>
+
+<p>
+  <b>Telefono:</b>
+  <%= @servicio.telefono %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%= @servicio.total %>
+</p>
+
+
+<%= link_to 'Edit', edit_servicio_path(@servicio) %> |
+<%= link_to 'Back', servicios_path %>

@@ -1,0 +1,37 @@
+<%= form_for(@mantenimiento) do |f| %>
+  <% if @mantenimiento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mantenimiento.errors.count, "error") %> prohibited this mantenimiento from being saved:</h2>
+
+      <ul>
+      <% @mantenimiento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :apartamento_numero %><br />
+    <%= f.text_field :apartamento_numero %>
+  </div>
+  <div class="field">
+    <%= f.label :pintura %><br />
+    <%= f.text_field :pintura %>
+  </div>
+  <div class="field">
+    <%= f.label :fumigacion %><br />
+    <%= f.text_field :fumigacion %>
+  </div>
+  <div class="field">
+    <%= f.label :plomeria %><br />
+    <%= f.text_field :plomeria %>
+  </div>
+  <div class="field">
+    <%= f.label :total %><br />
+    <%= f.text_field :total %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

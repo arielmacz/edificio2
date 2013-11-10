@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Apartamento numero:</b>
+  <%= @mantenimiento.apartamento_numero %>
+</p>
+
+<p>
+  <b>Pintura:</b>
+  <%= @mantenimiento.pintura %>
+</p>
+
+<p>
+  <b>Fumigacion:</b>
+  <%= @mantenimiento.fumigacion %>
+</p>
+
+<p>
+  <b>Plomeria:</b>
+  <%= @mantenimiento.plomeria %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%= @mantenimiento.total %>
+</p>
+
+
+<%= link_to 'Edit', edit_mantenimiento_path(@mantenimiento) %> |
+<%= link_to 'Back', mantenimientos_path %>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<h1>Apartamentos "La Colina"</h1>
+<ul id="MenuBar1" class="MenuBarHorizontal">
+<li><a href="http://localhost:3000/login">Login</a></li>
+<li><a href="http://localhost:3000/users">Usuarios</a></li>
+<li><a href="http://localhost:3000/apartamentos">Apartamentos</a></li>
+<li><a href="http://localhost:3000/mantenimientos">Mantenimiento</a></li>
+<li><a href="http://localhost:3000/servicios">Servicios</a></li>
+</ul>
+<p>&nbsp;</p>
+<% @apartamentos.each do |apartamento| %>
+<table width="640" border="1">
+  <tr>
+    <td width="63">No. Apto</td>
+    <td width="62">Meses de Contrato</td>
+    <td width="78">Mensualidad</td>
+    <td width="77">Mes de Pago</td>
+    <td width="62">Estado</td>
+    <td width="55">Inquilino</td>
+	<td width="89">Total Mantenimiento</td>
+    <td width="61">Total Servicios</td>
+    <td width="54">Total Contrato</td>
+    </tr>
+  <tr>
+    <td><%= apartamento.numero %></td>
+    <td><%= apartamento.meses_integer %></td>
+    <td><%= apartamento.mensualidad %></td>
+    <td><%= apartamento.mes %></td>
+    <td><%= apartamento.estado %></td>
+    <td><%= apartamento.user_name %></td>
+	<% @mantenimientos.each do |mantenimiento| %>
+    <td><%= mantenimiento.total %></td>
+	<% @servicios.each do |servicio|  %>
+    <td><%= servicio.total %></td>
+	<td><%= total_contrato = Apartamento.sum("mensualidad * meses_integer") %></td>
+    </tr>	
+</table>
+<% end %>
+<% end %>
+<% end %>

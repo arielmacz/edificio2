@@ -1,0 +1,31 @@
+<h1>Listing mantenimientos</h1>
+
+<table>
+  <tr>
+    <th>Apartamento numero</th>
+    <th>Pintura</th>
+    <th>Fumigacion</th>
+    <th>Plomeria</th>
+    <th>Total</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mantenimientos.each do |mantenimiento| %>
+  <tr>
+    <td><%= mantenimiento.apartamento_numero %></td>
+    <td><%= mantenimiento.pintura %></td>
+    <td><%= mantenimiento.fumigacion %></td>
+    <td><%= mantenimiento.plomeria %></td>
+    <td><%= mantenimiento.total %></td>
+    <td><%= link_to 'Show', mantenimiento %></td>
+    <td><%= link_to 'Edit', edit_mantenimiento_path(mantenimiento) %></td>
+    <td><%= link_to 'Destroy', mantenimiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mantenimiento', new_mantenimiento_path %>

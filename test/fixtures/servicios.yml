@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  apartamento_numero: MyString
+  agua: 9.99
+  luz: 9.99
+  telefono: 9.99
+  total: 9.99
+
+two:
+  apartamento_numero: MyString
+  agua: 9.99
+  luz: 9.99
+  telefono: 9.99
+  total: 9.99
