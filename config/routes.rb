@@ -74,7 +74,7 @@ end
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'admin#index', :as => 'admin'
+  root :to => 'inicio#index', :as => 'inicio'
 
   # See how all your routes lay out with "rake routes"
 
